@@ -1,0 +1,126 @@
+.hero-section {
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 24px 0;
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(20, 184, 166, 0.12)),
+    url("../assets/back.jpeg") center/cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 880px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 9px 16px;
+  border-radius: 999px;
+  color: #1d4ed8;
+  background: rgba(37, 99, 235, 0.1);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.hero-content h1 {
+  margin: 18px 0 8px;
+  font-size: clamp(46px, 7vw, 86px);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  color: #0f172a;
+}
+
+.hero-content h2 {
+  margin: 0;
+  font-size: clamp(24px, 4vw, 42px);
+  color: #2563eb;
+}
+
+.hero-text {
+  max-width: 720px;
+  margin: 24px 0 0;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #475569;
+}
+.hero-current
+{
+  color: #3903a5;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 16px;
+  font-weight: 900;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.primary-btn {
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+  box-shadow: 0 16px 28px rgba(37, 99, 235, 0.24);
+}
+
+.secondary-btn {
+  color: #1e3a8a;
+  background: white;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-4px);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(130px, 1fr));
+  gap: 16px;
+  max-width: 680px;
+  margin-top: 34px;
+}
+
+.stats-grid div {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.stats-grid strong {
+  display: block;
+  font-size: 26px;
+  color: #0f172a;
+}
+
+.stats-grid span {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

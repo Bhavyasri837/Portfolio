@@ -1,0 +1,141 @@
+:root {
+  --sidebar-width: 320px;
+  --header-height: 74px;
+  --footer-height: 64px;
+  --bg: #f8fbff;
+  --text: #172033;
+  --muted: #607089;
+  --primary: #2563eb;
+  --secondary: #14b8a6;
+  --accent: #f59e0b;
+  --card: rgba(255, 255, 255, 0.86);
+  --border: rgba(37, 99, 235, 0.12);
+  --shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(20, 184, 166, 0.16), transparent 32%),
+    radial-gradient(circle at 90% 12%, rgba(37, 99, 235, 0.16), transparent 30%),
+    var(--bg);
+}
+
+.main-layout {
+  min-height: 100vh;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+}
+
+.content {
+  width: calc(100% - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  padding: 28px clamp(22px, 4vw, 64px) 96px;
+  overflow-x: hidden;
+}
+
+.page-section {
+  min-height: calc(100vh - var(--header-height));
+  scroll-margin-top: calc(var(--header-height) + 18px);
+  display: flex;
+  align-items: center;
+  padding: 54px 0;
+}
+
+.section-card {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: clamp(24px, 4vw, 46px);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  animation: fadeUp 0.75s ease both;
+}
+
+.section-label {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.section-title {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  margin: 0 0 18px;
+  color: #0f172a;
+}
+
+.section-text {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 22px 0 0;
+  list-style: none;
+}
+
+.pill-list li,
+.skill-pill {
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(20, 184, 166, 0.1));
+  color: #1e3a8a;
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --sidebar-width: 0px;
+    --header-height: 118px;
+  }
+
+  .main-layout {
+    padding-top: var(--header-height);
+  }
+
+  .content {
+    width: 100%;
+    margin-left: 0;
+    padding-inline: 18px;
+  }
+
+  .page-section {
+    min-height: auto;
+    padding: 34px 0;
+  }
+}
