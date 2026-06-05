@@ -8,7 +8,7 @@ import Sidebar from "./Component/Sidebar";
 
 function App() {
   return (
-    <BrowserRouter basename="/Portfolio">
+    <BrowserRouter>
       <Header />
 
       <div className="main-layout">
