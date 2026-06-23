@@ -7,11 +7,13 @@ import tcs1 from "./assets/tcs_career.jpeg";
 import tcs2 from "./assets/tcs_presentation.jpeg";
 import edu1 from "./assets/aiml.jpeg";
 import edu2 from "./assets/android.jpeg";
+import skilldzire from "./assets/skilldzire.jpeg";
 
 export default function Certificates() {
   const [selectedCert, setSelectedCert] = useState(null);
 
   const certs = [
+    {img: skilldzire ,title:"Java FullStack virtual Internship", tag:"Internship"},
     { img: nec, title: "NEC 2025 Basic Track", tag: "Entrepreneurship" },
     { img: tcs1, title: "TCS iON Career Edge", tag: "Career Skills" },
     { img: tcs2, title: "TCS Presentation Skills", tag: "Communication" },

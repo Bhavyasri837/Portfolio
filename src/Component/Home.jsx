@@ -17,7 +17,6 @@ export default function Home() {
             B.Tech CSE student passionate about building clean, responsive and useful web
             applications using Java, React, Spring Boot and MySQL.
             </p>
-            <h3 className="hero-current"> Currently pursuing a Java Full Stack Development Internship at SkillDzire, focusing on developing scalable full stack applications using Java, Spring Boot, React.js, and MySQL.</h3>
 
           
 
