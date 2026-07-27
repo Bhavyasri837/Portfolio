@@ -8,6 +8,8 @@ import tcs2 from "./assets/tcs_presentation.jpeg";
 import edu1 from "./assets/aiml.jpeg";
 import edu2 from "./assets/android.jpeg";
 import skilldzire from "./assets/skilldzire.jpeg";
+import csscerti from "./assets/csscerti.png";
+import jscerti from "./assets/jscerti.png";
 
 export default function Certificates() {
   const [selectedCert, setSelectedCert] = useState(null);
@@ -20,6 +22,8 @@ export default function Certificates() {
     { img: infosys, title: "Infosys Core Java", tag: "Java" },
     { img: edu2, title: "Eduskills Android", tag: "Virtual Internship" },
     { img: edu1, title: "Eduskills AI-ML", tag: "Virtual Internship" },
+    {img: csscerti, title: "CSS(Basic)", tag: "CSS"},
+    {img: jscerti, title: "JAVASCRIPT", tag: "JS"}
   ];
 
   return (
