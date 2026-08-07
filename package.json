@@ -1,8 +1,8 @@
 {
+  
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Bhavyasri837.github.io/Portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
